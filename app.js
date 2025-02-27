@@ -116,15 +116,21 @@ const navLinks = document.querySelectorAll(".nav-link");
 
 navLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
-    displayMenuItems(
-      menu.filter((item) => {
-        item.category === event.target.value;
-      })
-    );
+    const category = event.target.value;
+    const filteredMenu = category === "all" ? menu : menu.filter((item) => item.category === category);
+    displayMenuItems(filteredMenu);
   });
 });
 window.addEventListener("DOMContentLoaded", function () {
   displayMenuItems(menu);
+});
+
+const themeToggle = document.querySelector('#theme-toggle');
+themeToggle.addEventListener('click', () => {
+  const isDarkMode = document.body.getAttribute('data-bs-theme') === 'dark';
+  document.body.setAttribute('data-bs-theme', isDarkMode ? 'light' : 'dark');
+  const icons = themeToggle.querySelectorAll('svg');
+  icons.forEach(icon => icon.classList.toggle('d-none'));
 });
 
 function displayMenuItems(menuItems) {
