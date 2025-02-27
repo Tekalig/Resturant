@@ -113,6 +113,7 @@ const menu = [
 ];
 const menuContainer = document.querySelector("#menu-items");
 const navLinks = document.querySelectorAll(".nav-link");
+const searchInput = document.querySelector("#search-input");
 
 navLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
@@ -121,6 +122,13 @@ navLinks.forEach((link) => {
     displayMenuItems(filteredMenu);
   });
 });
+
+searchInput.addEventListener("input", (event) => {
+  const query = event.target.value.toLowerCase();
+  const filteredMenu = menu.filter((item) => item.title.toLowerCase().includes(query) || item.description.toLowerCase().includes(query));
+  displayMenuItems(filteredMenu);
+});
+
 window.addEventListener("DOMContentLoaded", function () {
   displayMenuItems(menu);
 });
