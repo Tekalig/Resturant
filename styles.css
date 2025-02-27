@@ -10,7 +10,21 @@ img {
 video {
     height: 300px;
     max-width: 100%;
-    object-fit: cover;
+    object-fit: fill;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode .navbar {
+    background-color: #1f1f1f;
+}
+
+body.dark-mode .card {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
 }
 
 @media (min-width: 576px) {}
