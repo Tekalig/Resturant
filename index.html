@@ -18,11 +18,25 @@
     <nav class="navbar navbar-expand-lg bg-info-subtle">
       <div class="container-fluid d-flex">
         <a class="navbar-brand" href="">Restaurant</a>
-        <!-- Navbar toggler for mobile view -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <!-- Search input and theme toggle -->
+        <div class="d-flex ms-auto">
+          <form class="d-flex me-2" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search-input" />
+          </form>
+          <button type="button" id="theme-toggle" class="border-0 bg-info-subtle me-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-fill" viewBox="0 0 16 16">
+              <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun-fill d-none" viewBox="0 0 16 16">
+              <path d="M8 4.5a.5.5 0 0 1 .5.5v1.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5zm0 6a.5.5 0 0 1 .5.5v1.5a.5.5 0 0 1-1 0V11a.5.5 0 0 1 .5-.5zm4.5-2.5a.5.5 0 0 1 .5.5h1.5a.5.5 0 0 1 0 1H13a.5.5 0 0 1-.5-.5zm-9 0a.5.5 0 0 1 .5.5H2.5a.5.5 0 0 1 0-1H4a.5.5 0 0 1 .5-.5zm6.364-3.364a.5.5 0 0 1 .707 0l1.06 1.06a.5.5 0 0 1-.707.707l-1.06-1.06a.5.5 0 0 1 0-.707zm-6.728 6.728a.5.5 0 0 1 .707 0l1.06 1.06a.5.5 0 0 1-.707.707l-1.06-1.06a.5.5 0 0 1 0-.707zm6.728 0a.5.5 0 0 1 .707 0l1.06 1.06a.5.5 0 0 1-.707.707l-1.06-1.06a.5.5 0 0 1 0-.707zm-6.728-6.728a.5.5 0 0 1 .707 0l1.06 1.06a.5.5 0 0 1-.707.707l-1.06-1.06a.5.5 0 0 1 0-.707zM8 1a.5.5 0 0 1 .5.5v1.5a.5.5 0 0 1-1 0V1.5A.5.5 0 0 1 8 1zm0 12a.5.5 0 0 1 .5.5v1.5a.5.5 0 0 1-1 0V13.5a.5.5 0 0 1 .5-.5zM4.636 4.636a.5.5 0 0 1 .707 0l1.06 1.06a.5.5 0 0 1-.707.707l-1.06-1.06a.5.5 0 0 1 0-.707zm6.728 6.728a.5.5 0 0 1 .707 0l1.06 1.06a.5.5 0 0 1-.707.707l-1.06-1.06a.5.5 0 0 1 0-.707z"/>
+            </svg>
+          </button>
+          <!-- Navbar toggler for mobile view -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
 
         <!-- Navigation links -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -43,20 +57,7 @@
               <button value="beverages" class="nav-link" aria-current="page">Beverages</button>
             </li>
           </ul>
-          <!-- Search input -->
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search-input" />
-          </form>
-
         </div>
-        <button type="button" id="theme-toggle" class="border-0 bg-info-subtle">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-fill" viewBox="0 0 16 16">
-            <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
-          </svg>
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun-fill d-none" viewBox="0 0 16 16">
-            <path d="M8 4.5a.5.5 0 0 1 .5.5v1.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5zm0 6a.5.5 0 0 1 .5.5v1.5a.5.5 0 0 1-1 0V11a.5.5 0 0 1 .5-.5zm4.5-2.5a.5.5 0 0 1 .5.5h1.5a.5.5 0 0 1 0 1H13a.5.5 0 0 1-.5-.5zm-9 0a.5.5 0 0 1 .5.5H2.5a.5.5 0 0 1 0-1H4a.5.5 0 0 1 .5-.5zm6.364-3.364a.5.5 0 0 1 .707 0l1.06 1.06a.5.5 0 0 1-.707.707l-1.06-1.06a.5.5 0 0 1 0-.707zm-6.728 6.728a.5.5 0 0 1 .707 0l1.06 1.06a.5.5 0 0 1-.707.707l-1.06-1.06a.5.5 0 0 1 0-.707zm6.728 0a.5.5 0 0 1 .707 0l1.06 1.06a.5.5 0 0 1-.707.707l-1.06-1.06a.5.5 0 0 1 0-.707zm-6.728-6.728a.5.5 0 0 1 .707 0l1.06 1.06a.5.5 0 0 1-.707.707l-1.06-1.06a.5.5 0 0 1 0-.707zM8 1a.5.5 0 0 1 .5.5v1.5a.5.5 0 0 1-1 0V1.5A.5.5 0 0 1 8 1zm0 12a.5.5 0 0 1 .5.5v1.5a.5.5 0 0 1-1 0V13.5a.5.5 0 0 1 .5-.5zM4.636 4.636a.5.5 0 0 1 .707 0l1.06 1.06a.5.5 0 0 1-.707.707l-1.06-1.06a.5.5 0 0 1 0-.707zm6.728 6.728a.5.5 0 0 1 .707 0l1.06 1.06a.5.5 0 0 1-.707.707l-1.06-1.06a.5.5 0 0 1 0-.707z"/>
-          </svg>
-        </button>
       </div>
     </nav>
 
